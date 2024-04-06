@@ -1,7 +1,7 @@
 class Node:
-    def __init__(self, data, next=None):
+    def __init__(self, data, nexto=None):
         self.data = data
-        self.next = next
+        self.next = nexto
 
 def linked_list_from_string(s, index = 0):
     values = s.split(' -> ')
@@ -11,4 +11,4 @@ def linked_list_from_string(s, index = 0):
     if current_elm is None:
         return None
 
-    return Node(data=current_elm, next=linked_list_from_string(s, index + 1))
+    return Node(data=current_elm, nexto=linked_list_from_string(s, index + 1))
